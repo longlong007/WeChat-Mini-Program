@@ -5,7 +5,26 @@
     "es6": true,
     "enhance": true,
     "postcss": true,
-    "preloadBackground": true
+    "preloadBackground": true,
+    "compileWorklet": false,
+    "minified": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "swc": false,
+    "disableSWC": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
   },
   "condition": {
     "miniprogram": {
@@ -18,22 +37,21 @@
     "tabSize": 2
   },
   "libVersion": "3.2.0",
-  "appid": "",
+  "appid": "wxf54487f1e66562c9",
   "projectname": "wechat_mini_demo",
   "miniprogramRoot": ".",
+  "cloudfunctionRoot": "cloudfunctions/",
   "compileType": "miniprogram",
   "packOptions": {
     "ignore": [],
     "include": []
   },
   "editorType": "vscode",
-  "scripts": {
-    "beforeCompile": "",
-    "beforePreview": "",
-    "beforeUpload": ""
-  },
   "buildOptions": {
     "uglifyFileName": "",
     "enhance": true
-  }
+  },
+  "cloudbaseRoot": "cloudbaserc.json",
+  "simulatorPluginLibVersion": {},
+  "cloudbaseRoot": "cloudbaserc.json"
 }

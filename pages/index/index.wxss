@@ -47,3 +47,24 @@
   font-size: 28rpx;
   color: #999;
 }
+
+/* 导航按钮区域 */
+.nav-button {
+  margin-top: 60rpx;
+}
+
+/* 按钮样式 */
+.btn {
+  width: 400rpx;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn.primary {
+  background-color: #07c160;
+  border-color: #07c160;
+  color: #fff;
+}

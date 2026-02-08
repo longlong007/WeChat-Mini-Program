@@ -1,0 +1,299 @@
+/**
+ * 云开发示例页面样式
+ * 演示云函数、云数据库、云存储的使用界面
+ */
+
+/* 容器样式 */
+.container {
+  min-height: 100%;
+  background-color: #f5f5f5;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+/* 标题区域 */
+.header {
+  text-align: center;
+  padding: 40rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #07c160;
+  margin-bottom: 10rpx;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 区块标题 */
+.section {
+  margin-bottom: 30rpx;
+}
+
+.section-title {
+  padding: 20rpx 0;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  margin-bottom: 20rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 信息行样式 */
+.info-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+  flex-shrink: 0;
+  width: 180rpx;
+}
+
+.value {
+  font-size: 28rpx;
+  color: #333;
+  word-break: break-all;
+}
+
+/* 按钮组样式 */
+.button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 按钮样式 */
+.btn {
+  flex: 1;
+  min-width: 200rpx;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  border: 1rpx solid #ddd;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn.primary {
+  background-color: #07c160;
+  border-color: #07c160;
+  color: #fff;
+}
+
+.btn.small {
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+  min-width: 120rpx;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+}
+
+/* 文字按钮样式 */
+.btn-text {
+  font-size: 26rpx;
+  color: #07c160;
+  background: none;
+  padding: 10rpx 20rpx;
+  border: none;
+}
+
+.btn-text.danger {
+  color: #fa5151;
+}
+
+.btn-text::after {
+  border: none;
+}
+
+/* 输入框样式 */
+.input {
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+
+/* 待办事项列表样式 */
+.todo-list {
+  margin-top: 30rpx;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+  margin-bottom: 16rpx;
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.todo-content {
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.todo-text {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.todo-date {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.todo-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10rpx;
+}
+
+/* 空提示样式 */
+.empty-tip {
+  text-align: center;
+  padding: 60rpx 20rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* 统计信息样式 */
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #eee;
+  font-size: 26rpx;
+  color: #666;
+}
+
+/* 上传区域样式 */
+.upload-area {
+  width: 100%;
+  height: 300rpx;
+  border: 2rpx dashed #ddd;
+  border-radius: 8rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+}
+
+.upload-placeholder .icon {
+  font-size: 60rpx;
+  margin-bottom: 10rpx;
+}
+
+.preview-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 已上传图片列表样式 */
+.uploaded-list {
+  margin-top: 30rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #eee;
+}
+
+.list-title {
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.uploaded-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.uploaded-image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+}
+
+/* 信息提示框样式 */
+.info-box {
+  padding: 20rpx;
+  background-color: #f0f9eb;
+  border-radius: 8rpx;
+  border: 1rpx solid #c2e7b0;
+}
+
+.info-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #2c6619;
+  margin-bottom: 10rpx;
+}
+
+.info-text {
+  display: block;
+  font-size: 26rpx;
+  color: #4d7c0f;
+  line-height: 1.8;
+}

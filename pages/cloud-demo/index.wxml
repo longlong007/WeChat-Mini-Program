@@ -1,0 +1,192 @@
+<!--
+  云开发示例页面
+  演示云函数、云数据库、云存储的基本使用方法
+-->
+<view class="container">
+  <!-- 标题区域 -->
+  <view class="header">
+    <text class="title">微信云开发示例</text>
+    <text class="subtitle">学习云函数、云数据库、云存储</text>
+  </view>
+
+  <!-- 云函数示例区域 -->
+  <view class="section">
+    <view class="section-title">
+      <text>1. 云函数调用</text>
+    </view>
+    
+    <view class="card">
+      <view class="info-row">
+        <text class="label">用户OpenID：</text>
+        <text class="value">{{userInfo.openid || '未获取'}}</text>
+      </view>
+      
+      <view class="button-group">
+        <button 
+          class="btn primary" 
+          bindtap="callLoginFunction" 
+          loading="{{loading.login}}">
+          调用登录云函数
+        </button>
+        
+        <button 
+          class="btn" 
+          bindtap="callGetUserInfo" 
+          loading="{{loading.getUserInfo}}"
+          disabled="{{!userInfo.openid}}">
+          获取用户信息
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 云数据库示例区域 -->
+  <view class="section">
+    <view class="section-title">
+      <text>2. 云数据库操作</text>
+    </view>
+    
+    <view class="card">
+      <!-- 添加数据 -->
+      <view class="card-header">
+        <text class="card-title">添加待办事项</text>
+      </view>
+      
+      <input 
+        class="input" 
+        placeholder="输入待办事项内容" 
+        value="{{newTodo}}"
+        bindinput="onInputTodo"
+      />
+      
+      <button 
+        class="btn primary small" 
+        bindtap="addTodo" 
+        loading="{{loading.addTodo}}"
+        disabled="{{!newTodo}}">
+        添加
+      </button>
+      
+      <!-- 显示待办列表 -->
+      <view class="todo-list">
+        <view 
+          class="todo-item {{item.completed ? 'completed' : ''}}" 
+          wx:for="{{todos}}" 
+          wx:key="_id">
+          
+          <view class="todo-content">
+            <text class="todo-text">{{item.content}}</text>
+            <text class="todo-date">创建时间：{{item.createdAt}}</text>
+          </view>
+          
+          <view class="todo-actions">
+            <button 
+              class="btn-text" 
+              bindtap="toggleTodo" 
+              data-id="{{item._id}}"
+              data-completed="{{!item.completed}}">
+              {{item.completed ? '未完成' : '完成'}}
+            </button>
+            
+            <button 
+              class="btn-text danger" 
+              bindtap="deleteTodo" 
+              data-id="{{item._id}}">
+              删除
+            </button>
+          </view>
+        </view>
+        
+        <view class="empty-tip" wx:if="{{todos.length === 0}}">
+          <text>暂无待办事项</text>
+        </view>
+      </view>
+      
+      <view class="stats">
+        <text>待办总数：{{todos.length}}</text>
+        <button class="btn small" bindtap="queryTodos" loading="{{loading.queryTodo}}">
+          刷新列表
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 云存储示例区域 -->
+  <view class="section">
+    <view class="section-title">
+      <text>3. 云存储操作</text>
+    </view>
+    
+    <view class="card">
+      <view class="card-header">
+        <text class="card-title">上传图片到云存储</text>
+      </view>
+      
+      <view class="upload-area" bindtap="chooseImage">
+        <image 
+          wx:if="{{tempImagePath}}" 
+          class="preview-image" 
+          src="{{tempImagePath}}" 
+          mode="aspectFill">
+        </image>
+        <view wx:else class="upload-placeholder">
+          <text class="icon">+</text>
+          <text>选择图片</text>
+        </view>
+      </view>
+      
+      <view class="button-group" wx:if="{{tempImagePath}}">
+        <button 
+          class="btn primary" 
+          bindtap="uploadImage" 
+          loading="{{loading.upload}}"
+          disabled="{{!tempImagePath}}">
+          上传到云存储
+        </button>
+        
+        <button 
+          class="btn" 
+          bindtap="clearImage">
+          清除
+        </button>
+      </view>
+      
+      <!-- 显示已上传的图片 -->
+      <view class="uploaded-list" wx:if="{{uploadedImages.length > 0}}">
+        <text class="list-title">已上传的图片：</text>
+        <view class="uploaded-item" wx:for="{{uploadedImages}}" wx:key="fileID">
+          <image 
+            class="uploaded-image" 
+            src="{{item.fileID}}" 
+            mode="aspectFill"
+            data-url="{{item.fileID}}"
+            bindtap="previewImage">
+          </image>
+          <button 
+            class="btn-text danger" 
+            bindtap="deleteImage" 
+            data-url="{{item.fileID}}">
+            删除
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 数据库集合管理说明 -->
+  <view class="section">
+    <view class="section-title">
+      <text>4. 数据库集合说明</text>
+    </view>
+    
+    <view class="card">
+      <view class="info-box">
+        <text class="info-title">本示例使用的数据库集合：</text>
+        <text class="info-text">1. users - 存储用户信息</text>
+        <text class="info-text">2. todos - 存储待办事项</text>
+        <text class="info-text">注意：首次使用时，云函数会自动创建users集合</text>
+        <text class="info-text">todos集合需要手动在云开发控制台创建</text>
+      </view>
+    </view>
+  </view>
+</view>

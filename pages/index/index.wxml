@@ -26,4 +26,11 @@
   <view class="description">
     <text>这是一个最简单的微信小程序示例</text>
   </view>
+  
+  <!-- 跳转按钮 -->
+  <view class="nav-button">
+    <button class="btn primary" bindtap="navigateToCloudDemo">
+      进入云开发示例
+    </button>
+  </view>
 </view>

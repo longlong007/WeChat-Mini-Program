@@ -96,5 +96,24 @@ Page({
       title: '点击成功',
       icon: 'success'
     });
+  },
+
+  /**
+   * 跳转到云开发示例页面
+   */
+  navigateToCloudDemo() {
+    wx.navigateTo({
+      url: '/pages/cloud-demo/index',
+      success: () => {
+        console.log('跳转到云开发示例页面');
+      },
+      fail: (err) => {
+        console.error('跳转失败', err);
+        wx.showToast({
+          title: '跳转失败',
+          icon: 'none'
+        });
+      }
+    });
   }
 });
