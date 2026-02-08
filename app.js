@@ -1,0 +1,32 @@
+// app.js
+// 小程序全局逻辑文件
+// 在这里定义小程序的生命周期函数和全局数据
+
+App({
+  // 小程序初始化时执行（全局只执行一次）
+  onLaunch(options) {
+    // 开发者模式下的日志输出
+    console.log('小程序初始化完成', options);
+  },
+
+  // 小程序启动时执行（每次从后台进入前台都会执行）
+  onShow(options) {
+    console.log('小程序显示', options);
+  },
+
+  // 小程序隐藏时执行（每次从前台进入后台都会执行）
+  onHide() {
+    console.log('小程序隐藏');
+  },
+
+  // 全局错误监听函数
+  onError(msg) {
+    console.error('小程序发生错误:', msg);
+  },
+
+  // 全局数据（可以在所有页面中访问）
+  globalData: {
+    appName: 'Hello World 小程序',
+    version: '1.0.0'
+  }
+});

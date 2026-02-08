@@ -1,0 +1,29 @@
+<!-- 
+  index.wxml
+  首页结构文件（类似于HTML）
+  
+  WXML（WeiXin Markup Language）是微信小程序的标记语言
+  用于描述页面的结构和内容
+  
+  常用标签：
+  - view: 容器组件，类似于HTML的div
+  - text: 文本组件，用于显示文字
+  - image: 图片组件
+  - button: 按钮组件
+-->
+<view class="container">
+  <!-- 问候语 -->
+  <view class="greeting">
+    <text class="title">Hello World!</text>
+  </view>
+  
+  <!-- 副标题 -->
+  <view class="subtitle">
+    <text>欢迎进入微信小程序的世界</text>
+  </view>
+  
+  <!-- 说明文本 -->
+  <view class="description">
+    <text>这是一个最简单的微信小程序示例</text>
+  </view>
+</view>

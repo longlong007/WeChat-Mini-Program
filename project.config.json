@@ -1,0 +1,39 @@
+{
+  "description": "Hello World微信小程序教程项目",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackground": true
+  },
+  "condition": {
+    "miniprogram": {
+      "before": [],
+      "after": []
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  },
+  "libVersion": "3.2.0",
+  "appid": "",
+  "projectname": "wechat_mini_demo",
+  "miniprogramRoot": ".",
+  "compileType": "miniprogram",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "editorType": "vscode",
+  "scripts": {
+    "beforeCompile": "",
+    "beforePreview": "",
+    "beforeUpload": ""
+  },
+  "buildOptions": {
+    "uglifyFileName": "",
+    "enhance": true
+  }
+}

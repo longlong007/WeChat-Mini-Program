@@ -1,0 +1,49 @@
+/** 
+ * index.wxss 
+ * 页面样式文件（类似于CSS）
+ * 
+ * wxss是微信小程序的样式语言
+ * - 支持大部分CSS选择器
+ * - 支持rpx单位（响应式像素，自动适配不同屏幕宽度）
+ * - 支持@import导入外部样式文件
+ */
+
+/* 容器样式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+
+/* 问候语样式 */
+.greeting {
+  margin-bottom: 30rpx;
+}
+
+/* 标题样式 */
+.title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #07c160;
+  text-align: center;
+}
+
+/* 副标题样式 */
+.subtitle {
+  margin-bottom: 20rpx;
+}
+
+.subtitle text {
+  font-size: 32rpx;
+  color: #666;
+}
+
+/* 说明文本样式 */
+.description text {
+  font-size: 28rpx;
+  color: #999;
+}
