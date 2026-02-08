@@ -17,7 +17,7 @@ App({
         // env 参数说明：
         // 请替换为你的云环境ID
         // 可以登录微信公众平台，在云开发控制台中查看
-        env: 'your-env-id',
+        env: 'cloud1-0gxm09652ddd3d4c',
         traceUser: true,
       });
       console.log('云开发环境初始化成功');
